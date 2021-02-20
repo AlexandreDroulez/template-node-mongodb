@@ -1,0 +1,31 @@
+{
+  "name": "back-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r esm index.js",
+    "mongo": "docker run -d -p 27017:27017 -e MONGODB_USER='root' -e MONGODB_DATABASE='admin' -e MONGODB_PASS='password' goomeo/mongodb:3.4",
+    "docker-clean": "docker stop `docker ps -qa` && docker rm `docker ps -qa`"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "http-status": "^1.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
+    "nodemon": "^2.0.5",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-prettier": "^3.1.2"
+  }
+}

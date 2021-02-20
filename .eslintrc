@@ -1,0 +1,15 @@
+{
+  "extends": ["airbnb-base"],
+  "globals": {
+    "sinon": true,
+    "expect": true,
+    "describe": true,
+    "it": true
+  },
+  "rules": {
+    "import/prefer-default-export": 0,
+    "no-underscore-dangle": ["error", { "allow": ["_id"], }],
+    "camelcase": ["error", { "ignoreImports": true, "properties": "never" }],
+    "max-len": ["error", { "code": 150 }],
+  },
+}
